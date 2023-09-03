@@ -10,18 +10,21 @@ def fetch_calendar_events(api_key=CALENDAR_API_KEY):
     # Initialize the Calendar API client with an API key
     service = build("calendar", "v3", developerKey=api_key)
 
-    # Get the current time in UTC
-    now = datetime.now(pytz.utc)
+    # Get the current time in Central Time
+    central = pytz.timezone("US/Central")
+    now_central = datetime.now(central)
 
-    # Set the time to midnight to represent the start of the day
-    start_of_today = now.replace(hour=0, minute=0, second=0, microsecond=0)
+    # Set the time to midnight to represent the start of the day in Central Time
+    start_of_today_central = now_central.replace(
+        hour=0, minute=0, second=0, microsecond=0
+    )
 
-    # Calculate the date 7 days later, also at midnight
-    end_of_7_days = start_of_today + timedelta(days=7)
+    # Calculate the date 7 days later, also at midnight in Central Time
+    end_of_7_days_central = start_of_today_central + timedelta(days=7)
 
     # Convert to ISO format
-    timeMin = start_of_today.isoformat()
-    timeMax = end_of_7_days.isoformat()
+    timeMin = start_of_today_central.isoformat()
+    timeMax = end_of_7_days_central.isoformat()
 
     print("Fetching events from:", timeMin)
     print("Fetching events up to:", timeMax)
@@ -30,7 +33,7 @@ def fetch_calendar_events(api_key=CALENDAR_API_KEY):
     events_result = (
         service.events()
         .list(
-            calendarId="s37s3qvlf9nobhplqp0umlcafs@group.calendar.google.com",
+            calendarId="s37s3qvlf9nobhplqp0umlcafs@group.calendar.google.com",  # Replace with your actual Calendar ID
             timeMin=timeMin,
             timeMax=timeMax,
             maxResults=50,
@@ -67,7 +70,7 @@ def extract_events(events_json):
         local_start_time = original_start_time.astimezone(local_tz)
 
         # Format the date and time as required
-        formatted_date = local_start_time.strftime("%b %d").replace(" 0", " ")
+        formatted_date = local_start_time.strftime("%a %b %d").replace(" 0", " ")
         formatted_time = (
             local_start_time.strftime("%-I:%M%p").lower().lstrip("0").replace(":00", "")
         )
@@ -93,8 +96,8 @@ def return_calendar_events():
     return calendar_json
 
 
-# if __name__ == "__main__":
-#     # events_json = fetch_calendar_events()
-#     calendar_json = return_calendar_events()
-#     print("Fetched events in JSON format:")
-#     print(calendar_json)
+if __name__ == "__main__":
+    test_json = fetch_calendar_events()
+    # calendar_json = return_calendar_events()
+    print("Fetched events in JSON format:")
+    print(test_json)
