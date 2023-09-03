@@ -54,6 +54,7 @@ def fetch_calendar_events(api_key=CALENDAR_API_KEY):
 def extract_events(events_json):
     events_list = json.loads(events_json)
     extracted_events = []
+    last_date = None  # Initialize variable to keep track of the last date
 
     for event in events_list:
         original_start_time = event["start"].get("dateTime")
@@ -70,7 +71,7 @@ def extract_events(events_json):
         local_start_time = original_start_time.astimezone(local_tz)
 
         # Format the date and time as required
-        formatted_date = local_start_time.strftime("%a %b %d").replace(" 0", " ")
+        formatted_date = local_start_time.strftime("%a - %b %d").replace(" 0", " ")
         formatted_time = (
             local_start_time.strftime("%-I:%M%p").lower().lstrip("0").replace(":00", "")
         )
@@ -78,9 +79,18 @@ def extract_events(events_json):
         # Extract the event summary
         summary = event.get("summary", "No Summary")
 
+        # Check if the date is different from the last one or if it's the first entry
+        if last_date is None or last_date != formatted_date:
+            date_to_use = formatted_date
+        else:
+            date_to_use = ""
+
+        # Update the last date
+        last_date = formatted_date
+
         # Create a dictionary with the extracted info
         extracted_event = {
-            "date": formatted_date,
+            "date": date_to_use,
             "time": formatted_time,
             "service": summary,
         }
