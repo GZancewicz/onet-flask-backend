@@ -3,3 +3,5 @@ FastAPI==0.103.1
 flask_cors==4.0.0
 requests==2.28.2
 gunicorn
+google-api-python-client==2.91.0
+pytz==2023.3
