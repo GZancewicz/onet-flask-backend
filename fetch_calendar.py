@@ -36,7 +36,7 @@ def fetch_calendar_events(api_key=CALENDAR_API_KEY):
             calendarId="s37s3qvlf9nobhplqp0umlcafs@group.calendar.google.com",  # Replace with your actual Calendar ID
             timeMin=timeMin,
             timeMax=timeMax,
-            maxResults=50,
+            maxResults=15,
             singleEvents=True,
             orderBy="startTime",
         )
