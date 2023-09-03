@@ -1,0 +1,30 @@
+
+Restyle and clean up an `_file.html` using `skeleton.css` as follows
+
+- **Strip Everything Except Body Content**:
+   - Remove all content in `_file.html` outside of the `<body>` tags.   
+
+   
+- **Replace Inline Styles with Classes**:
+   - Replace inline styles with appropriate classes from `skeleton.css`.
+   - Specifically, replace container styles with the `container` class.
+   - Remove inline styles from anchor (`<a>`) tags.
+   
+- **Remove Comments**:
+   - Remove all HTML comments.
+   
+- **Remove `<script>` Tags**:
+   - Remove all `<script>` tags from the HTML.
+   
+- **Remove Unused Class Definitions**:
+   - Identify classes in the HTML that are not in `skeleton.css`
+   - Remove these unused classes from the HTML content.
+
+- **Enclose content**
+   - Enclose the content in the HTML file in a `<div>` with `id="page-content"`
+   
+
+- **Create the File**:
+   - Save the cleaned and restyled content as `output.html` and make it available for me to download
+
+
