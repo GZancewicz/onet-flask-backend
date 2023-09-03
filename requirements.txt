@@ -1,2 +1,2 @@
 Flask==2.1.2
-FastAPI==2.6.3
+FastAPI==0.103.1
