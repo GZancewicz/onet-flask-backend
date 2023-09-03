@@ -2,6 +2,7 @@ from flask import Flask, jsonify
 from flask_cors import CORS
 import os
 import json
+from fetch_youtube import fetch_latest_videos
 
 
 app = Flask(__name__)
@@ -47,6 +48,15 @@ def get_latest_schedule():
         return jsonify(schedule), 200
     else:
         return jsonify({"error": "No schedule files found"}), 404
+
+
+@app.route("/latest_videos", methods=["GET"])
+def get_latest_videos():
+    latest_videos = fetch_latest_videos()
+    if latest_videos:
+        return jsonify(latest_videos), 200
+    else:
+        return jsonify({"error": "No videos found"}), 404
 
 
 if __name__ == "__main__":
