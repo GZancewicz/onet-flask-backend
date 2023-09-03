@@ -1,0 +1,72 @@
+[
+    {
+        "date": "Mon 8/14 ",
+        "time": "6pm ",
+        "service": "Paraklesis "
+    },
+    {
+        "date": "Tue 8/15 ",
+        "time": "6pm ",
+        "service": "Paraklesis, then Vespers "
+    },
+    {
+        "date": "Wed 8/16 ",
+        "time": "8:30am  ",
+        "service": "Divine Liturgy "
+    },
+    {
+        "date": "Wed 8/16 ",
+        "time": "6pm ",
+        "service": "Paraklesis, then Vespers "
+    },
+    {
+        "date": "Thu 8/17 ",
+        "time": "8:30am  ",
+        "service": "Divine Liturgy "
+    },
+    {
+        "date": "Thu 8/17 ",
+        "time": "7pm ",
+        "service": "Vespers, then Paraklesis "
+    },
+    {
+        "date": "Fri 8/18 ",
+        "time": "6am ",
+        "service": "Divine Liturgy "
+    },
+    {
+        "date": "Fri 8/18 ",
+        "time": "5:30pm  ",
+        "service": "Paraklesis, then Vigil for Transfiguration "
+    },
+    {
+        "date": "Sat 8/19 ",
+        "time": "9am ",
+        "service": "Divine Liturgy, preceded by Baptism at 8am "
+    },
+    {
+        "date": "Sat 8/19 ",
+        "time": "2pm ",
+        "service": "Confessions (please signup) "
+    },
+    {
+        "date": "Sat 8/19 ",
+        "time": "4pm ",
+        "service": "Paraklesis, then Vigil, followed by Confessions "
+    },
+    {
+        "date": "Sun 8/20 ",
+        "time": "8:30am  ",
+        "service": "Confessions (please signup) "
+    },
+    {
+        "date": "Sun 8/20 ",
+        "time": "9am ",
+        "service": "Hours and Liturgy, Trapeza, Catechism class "
+    },
+    {
+        "date": "Sun 8/20 ",
+        "time": "2pm",
+        "service": "Paraklesis, then Vespers"
+    }
+]

@@ -1,0 +1,87 @@
+[
+    {
+        "date": "Mon 8/21 ",
+        "time": "6am ",
+        "service": "Matins "
+    },
+    {
+        "date": "Mon 8/21 ",
+        "time": "7pm ",
+        "service": "Paraklesis "
+    },
+    {
+        "date": "Tue 8/22 ",
+        "time": "6pm ",
+        "service": "Paraklesis, then Vespers "
+    },
+    {
+        "date": "Wed 8/23 ",
+        "time": "8:30am  ",
+        "service": "Divine Liturgy "
+    },
+    {
+        "date": "Wed 8/23 ",
+        "time": "6pm ",
+        "service": "Paraklesis, then Vespers "
+    },
+    {
+        "date": "Thu 8/24 ",
+        "time": "8:30am  ",
+        "service": "Divine Liturgy "
+    },
+    {
+        "date": "Thu 8/24 ",
+        "time": "7pm ",
+        "service": "Paraklesis "
+    },
+    {
+        "date": "Fri 8/25 ",
+        "time": "6am ",
+        "service": "Divine Liturgy "
+    },
+    {
+        "date": "Fri 8/25 ",
+        "time": "5:30pm  ",
+        "service": "Slavonic Vespers, then Paraklasis"
+    },
+    {
+        "date": "Sat 8/26 ",
+        "time": "9am ",
+        "service": "Divine Liturgy in Slavonic"
+    },
+    {
+        "date": "Sat 8/26 ",
+        "time": "2pm ",
+        "service": "Confessions (please signup) "
+    },
+    {
+        "date": "Sat 8/26 ",
+        "time": "4pm ",
+        "service": "Paraklesis, then Vigil, followed by Confessions "
+    },
+    {
+        "date": "Sun 8/27 ",
+        "time": "8:30am  ",
+        "service": "Confessions (please signup) "
+    },
+    {
+        "date": "Sun 8/27 ",
+        "time": "9am ",
+        "service": "Hours and Liturgy, Trapeza, Catechism class "
+    },
+    {
+        "date": "Sun 8/27 ",
+        "time": "2:30pm",
+        "service": "Vigil for Dormition"
+    },
+    {
+        "date": "Mon 8/28 ",
+        "time": "6am",
+        "service": "Early Divine Liturgy for Dormition, or"
+    },
+    {
+        "date": "Mon 8/28 ",
+        "time": "8:30am",
+        "service": "Divine Liturgy for Dormition"
+    }
+]

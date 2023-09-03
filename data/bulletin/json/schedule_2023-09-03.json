@@ -1,0 +1,72 @@
+[
+    {
+        "date": "Sun 9/3 ",
+        "time": "8:30am  ",
+        "service": "Confessions (please signup) "
+    },
+    {
+        "date": "Sun 9/3 ",
+        "time": "9am ",
+        "service": "Hours and Liturgy, Trapeza, Catechism class "
+    },
+    {
+        "date": "Mon 9/4 ",
+        "time": "6:30am",
+        "service": "Matins"
+    },
+    {
+        "date": "Tue 9/5",
+        "time": "7pm ",
+        "service": "Vespers "
+    },
+    {
+        "date": "Wed 9/6",
+        "time": "8:30am  ",
+        "service": "Divine Liturgy "
+    },
+    {
+        "date": "Wed 9/6",
+        "time": "7pm ",
+        "service": "Vespers "
+    },
+    {
+        "date": "Thu 9/7",
+        "time": "8:30am  ",
+        "service": "Divine Liturgy "
+    },
+    {
+        "date": "Thu 9/7",
+        "time": "7pm ",
+        "service": "Vespers, Meleben with Akathist to St Nicholas"
+    },
+    {
+        "date": "Fri 9/8",
+        "time": "6am ",
+        "service": "Divine Liturgy "
+    },
+    {
+        "date": "Sat 9/9 ",
+        "time": "2pm ",
+        "service": "Confessions (please signup) "
+    },
+    {
+        "date": "Sat 9/9",
+        "time": "5pm ",
+        "service": "Vigil, followed by Confessions "
+    },
+    {
+        "date": "Sun 9/10",
+        "time": "8:30am  ",
+        "service": "Confessions (please signup) "
+    },
+    {
+        "date": "Sun 9/10 ",
+        "time": "9am ",
+        "service": "Hours and Liturgy, Trapeza, Catechism class "
+    },
+    {
+        "date": "Sun 9/10 ",
+        "time": "6:30pm",
+        "service": "Vigil for Beheading of St John the Foreunner "
+    }
+]
