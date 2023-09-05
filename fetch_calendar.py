@@ -2,11 +2,10 @@ from googleapiclient.discovery import build
 from datetime import datetime, timedelta
 import json
 import pytz
+from calendar_credentials import get_api_key
 
-CALENDAR_API_KEY = "AIzaSyCaji-TZ8z0AqNdKGMHrz4gufRgnweO3c8"
 
-
-def fetch_calendar_events(api_key=CALENDAR_API_KEY):
+def fetch_calendar_events(api_key=get_api_key()):
     # Initialize the Calendar API client with an API key
     service = build("calendar", "v3", developerKey=api_key)
 
