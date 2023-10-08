@@ -2,12 +2,14 @@ from flask import Flask, jsonify
 from flask_cors import CORS
 import os
 import json
-from fetch_youtube import (
-    fetch_latest_videos,
-    fetch_childrens_playlist,
-    fetch_catechism_playlist,
-    fetch_homilies_playlist,
-)
+
+# from fetch_youtube import (
+#     fetch_latest_videos,
+#     fetch_childrens_playlist,
+#     fetch_catechism_playlist,
+#     fetch_homilies_playlist,
+# )
+from fetch_youtube import fetch_latest_videos
 from fetch_calendar import return_calendar_events
 
 
