@@ -57,13 +57,34 @@ def fetch_post(post_id):
     return response_data
 
 
+# Override these to allow frontend to control formatting
+def reformat_headings(content):
+    return (
+        content.replace("<h1", "<strong")
+        .replace("</h1>", "</strong>")
+        .replace("<h2", "<strong")
+        .replace("</h2>", "</strong>")
+        .replace("<h3", "<strong")
+        .replace("</h3>", "</strong>")
+        .replace("<h4", "<strong")
+        .replace("</h4>", "</strong>")
+        .replace("<h5", "<strong")
+        .replace("</h5>", "</strong>")
+        .replace("<h6", "<strong")
+        .replace("</h6>", "</strong>")
+    )
+
+
 def fetch_article(post_id):
     params = {"key": GHOST_API_KEY, "include": "tags,authors"}
     response = requests.get(post_url(post_id), params=params)
     response_data = response.json()
+    title = response_data["posts"][0]["title"]
+    content = response_data["posts"][0]["html"]
+    content = reformat_headings(content)
     return {
-        "title": response_data["posts"][0]["title"],
-        "content": response_data["posts"][0]["html"],
+        "title": title,
+        "content": content,
     }
 
 
@@ -72,4 +93,4 @@ def fetch_article(post_id):
 # print(json.dumps(fetch_tags(), indent=2))
 # print(json.dumps(fetch_tagged_posts("orthodox_net"), indent=2))
 # print(json.dumps(fetch_post("652a8f969a71080001718f5b"), indent=2))
-# print(json.dumps(fetch_article_content("652a8f969a71080001718f5b"), indent=2))
+# print(json.dumps(fetch_article("652a8f969a71080001718f5b"), indent=2))
