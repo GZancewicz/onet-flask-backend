@@ -57,8 +57,19 @@ def fetch_post(post_id):
     return response_data
 
 
+def fetch_article(post_id):
+    params = {"key": GHOST_API_KEY, "include": "tags,authors"}
+    response = requests.get(post_url(post_id), params=params)
+    response_data = response.json()
+    return {
+        "title": response_data["posts"][0]["title"],
+        "content": response_data["posts"][0]["html"],
+    }
+
+
 # if __name__ == "__main__":
 # print(json.dumps(fetch_posts(), indent=2))
 # print(json.dumps(fetch_tags(), indent=2))
 # print(json.dumps(fetch_tagged_posts("orthodox_net"), indent=2))
-# print(json÷.dumps(fetch_post("652a8f969a71080001718f5b"), indent=2))
+# print(json.dumps(fetch_post("652a8f969a71080001718f5b"), indent=2))
+# print(json.dumps(fetch_article_content("652a8f969a71080001718f5b"), indent=2))

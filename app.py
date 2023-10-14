@@ -10,6 +10,7 @@ from fetch_youtube import (
     fetch_homilies_playlist,
 )
 from fetch_calendar import return_calendar_events
+from fetch_ghost import fetch_article
 
 
 app = Flask(__name__)
@@ -19,6 +20,15 @@ CORS(app)
 @app.route("/heartbeat", methods=["GET"])
 def heartbeat():
     return jsonify({"status": "ok"}), 200
+
+
+@app.route("/test_article", methods=["GET"])
+def get_test_article():
+    article = fetch_article("652a8f969a71080001718f5b")
+    if article:
+        return jsonify(article), 200
+    else:
+        return jsonify({"error": "No article content found"}), 404
 
 
 @app.route("/schedule", methods=["GET"])
