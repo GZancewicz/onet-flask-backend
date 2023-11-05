@@ -1,4 +1,4 @@
-from flask import Flask, jsonify
+from flask import Flask, jsonify, request
 from flask_cors import CORS
 import os
 import json
@@ -38,6 +38,18 @@ def get_article_list():
         return jsonify(article_list), 200
     else:
         return jsonify({"error": "No articles found"}), 404
+
+
+@app.route("/onet_article", methods=["GET"])
+def get_onet_article():
+    article_id = request.args.get("article_id")
+    if not article_id:
+        return jsonify({"error": "article_id parameter is required"}), 400
+    article = fetch_article(article_id)
+    if article:
+        return jsonify(article), 200
+    else:
+        return jsonify({"error": "No article content found for the provided ID"}), 404
 
 
 @app.route("/schedule", methods=["GET"])
