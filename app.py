@@ -10,7 +10,7 @@ from fetch_youtube import (
     fetch_homilies_playlist,
 )
 from fetch_calendar import return_calendar_events
-from fetch_ghost import fetch_article
+from fetch_ghost import fetch_article, fetch_tagged_posts
 
 
 app = Flask(__name__)
@@ -29,6 +29,15 @@ def get_test_article():
         return jsonify(article), 200
     else:
         return jsonify({"error": "No article content found"}), 404
+
+
+@app.route("/onet_articles", methods=["GET"])
+def get_article_list():
+    article_list = fetch_tagged_posts("orthodox_net")
+    if article_list:
+        return jsonify(article_list), 200
+    else:
+        return jsonify({"error": "No articles found"}), 404
 
 
 @app.route("/schedule", methods=["GET"])
