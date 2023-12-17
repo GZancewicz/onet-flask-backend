@@ -91,6 +91,6 @@ def fetch_article(post_id):
 if __name__ == "__main__":
     # print(json.dumps(fetch_posts(), indent=2))
     # print(json.dumps(fetch_tags(), indent=2))
-    print(json.dumps(fetch_tagged_posts("orthodox_net"), indent=2))
+    # print(json.dumps(fetch_tagged_posts("orthodox_net"), indent=2))
     # print(json.dumps(fetch_post("652a8f969a71080001718f5b"), indent=2))
     # print(json.dumps(fetch_article("652a8f969a71080001718f5b"), indent=2))
