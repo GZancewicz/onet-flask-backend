@@ -52,6 +52,19 @@ def get_onet_article():
         return jsonify({"error": "No article content found for the provided ID"}), 404
 
 
+@app.route("/latest_article", methods=["GET"])
+def get_latest_article():
+    articles = get_article_list
+    article_id = request.args.get("article_id")
+    if not article_id:
+        return jsonify({"error": "article_id parameter is required"}), 400
+    article = fetch_article(article_id)
+    if article:
+        return jsonify(article), 200
+    else:
+        return jsonify({"error": "No article content found for the provided ID"}), 404
+
+
 @app.route("/schedule", methods=["GET"])
 def get_latest_schedule():
     latest_schedule = return_calendar_events()
