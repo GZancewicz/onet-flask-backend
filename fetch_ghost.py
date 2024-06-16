@@ -10,7 +10,7 @@ from datetime import datetime
 BASE_URL = "https://orthodox-net.ghost.io/ghost/api/content/"
 POSTS_ENDPOINT = "/posts/"
 TAGS_ENDPOINT = "/tags/"
-GHOST_API_KEY = "fc614c68ef24717d70c30606ba"
+GHOST_API_KEY = "ab0d0b54de26f5ffdb79dfe66a"
 
 
 def posts_url():

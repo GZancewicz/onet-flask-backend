@@ -54,7 +54,7 @@ def get_onet_article():
 
 @app.route("/latest_article", methods=["GET"])
 def get_latest_article():
-    articles = get_article_list
+    articles = get_article_list()
     article_id = request.args.get("article_id")
     if not article_id:
         return jsonify({"error": "article_id parameter is required"}), 400
