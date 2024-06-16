@@ -39,7 +39,11 @@ def get_article_list_to_list():
         return jsonify({"error": "No articles found"}), 404
 
     filtered_articles = [
-        {"id": article["id"], "primary_tag_slug": article["primary_tag"]["slug"]}
+        {
+            "id": article["id"],
+            "primary_tag_slug": article["primary_tag"]["slug"],
+            "title": article["title"],
+        }
         for article in article_list.get("posts", [])
         if article["primary_tag"]["name"].startswith("onet_")
     ]
