@@ -31,13 +31,13 @@ def get_test_article():
         return jsonify({"error": "No article content found"}), 404
 
 
-@app.route("/onet_articles_by_onet_slug", methods=["GET"])
-def get_article_list():
-    article_list = fetch_tagged_posts("orthodox_net")
-    if article_list:
-        return jsonify(article_list), 200
-    else:
-        return jsonify({"error": "No articles found"}), 404
+# @app.route("/onet_articles_by_onet_slug", methods=["GET"])
+# def get_article_list():
+#     article_list = fetch_tagged_posts("orthodox_net")
+#     if article_list:
+#         return jsonify(article_list), 200
+#     else:
+#         return jsonify({"error": "No articles found"}), 404
 
 
 @app.route("/onet_articles", methods=["GET"])
